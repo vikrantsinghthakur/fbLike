@@ -18,11 +18,8 @@
     "Starter",
     "template"
   ],
-  "author": "Ali Al Dallal",
+  "author": "Vikrantsingh Thakur",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/alicoding/react-webpack-babel/issues"
-  },
   "homepage": "https://github.com/alicoding/react-webpack-babel#readme",
   "dependencies": {
     "bootstrap": "3.3.5",
