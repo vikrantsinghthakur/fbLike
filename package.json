@@ -14,6 +14,7 @@
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "setupEnvScriptFile":"<rootDir>/jest/localStorageMock",
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
       "<rootDir>/node_modules/fbjs"
