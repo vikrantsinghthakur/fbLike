@@ -30,4 +30,13 @@ describe('Para', function() {
  		}
  	});
 
+ 	it('should change state on click', function(){
+ 		var para= TestUtils.renderIntoDocument(<Para1/>);
+ 		var label= ReactDOM.findDOMNode(para);
+ 		var stat1=label.textContent;
+ 		TestUtils.Simulate.click(para);
+ 		var stat2=ReactDOM.findDOMNode(para).textContent;
+ 		expect(stat1).not.toEqual(stat2);
+ 	});
+
 });
