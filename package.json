@@ -15,8 +15,8 @@
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
     "unmockedModulePathPatterns": [
-    "<rootDir>/node_modules/react",
-    "<rootDir>/node_modules/fbjs"
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/fbjs"
     ]
   },
   "keywords": [
@@ -33,6 +33,7 @@
     "bootstrap": "3.3.5",
     "node-libs-browser": "1.0.0",
     "react": "0.14.6",
+    "react-bootstrap": "^0.28.2",
     "react-dom": "0.14.6"
   },
   "devDependencies": {

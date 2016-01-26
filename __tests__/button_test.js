@@ -9,9 +9,24 @@ describe('Para', function() {
 	beforeEach(function(){
 		Para1=require('./../components/para.js');
 	});
+
  	it('should render component', function() {
-   
  	var para= TestUtils.renderIntoDocument(<Para1/>);
  	expect(TestUtils.isCompositeComponent(para)).toBeTruthy();
- });
+ 	});
+
+ 	it('should get initial state from localstorage', function(){
+ 		var para= TestUtils.renderIntoDocument(<Para1/>);
+ 		var label= ReactDOM.findDOMNode(para);
+ 		var stat=localstorage.getItem("likedState");
+ 		if(stat==NULL || stat==false)
+ 		{
+ 			expect(label.getDOMNode().textContent).toEqual('Like');
+ 		}
+ 		else
+ 		{
+ 			expect(label.getDOMNode().textContent).toEqual('Liked');	
+ 		}
+ 	});
+
 });

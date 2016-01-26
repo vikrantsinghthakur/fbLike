@@ -6,8 +6,9 @@ import Para from './components/para.js';
 class App extends React.Component {
 	render() {
 		return (
-      <div>Simple React + Babel + Bootstrap + Webpack 
-      <Para/></div>
+      	<div>
+      		<Para/>
+      	</div>
 		);
 	}
 }
