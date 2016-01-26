@@ -1,18 +1,19 @@
 require("./node_modules/bootstrap/dist/css/bootstrap.min.css")
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Para from './components/para.js';
+import { render } from 'react-dom';
+import Para from './components/para';
+import {createStore} from 'redux';
+import { Provider } from 'react-redux';
 
-class App extends React.Component {
-	render() {
-		return (
-      	<div>
-      		<Para/>
-      	</div>
-		);
-	}
-}
+import flipLike from './reducers/flipLike';
+const FALSE=false;
+let store=createStore(flipLike,{'stat':FALSE});
 
-ReactDOM.render(<App/>, document.querySelector("#myApp"));
+let rootElement= document.querySelector("#myApp");
 
-module.exports= App;
+	render(
+		<Provider store={store}>
+		<Para/>
+		</Provider>,
+		rootElement
+		)

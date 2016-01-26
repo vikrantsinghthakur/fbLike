@@ -14,7 +14,7 @@
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "setupEnvScriptFile":"<rootDir>/jest/localStorageMock",
+    "setupEnvScriptFile": "<rootDir>/jest/localStorageMock",
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
       "<rootDir>/node_modules/fbjs"
@@ -35,7 +35,9 @@
     "node-libs-browser": "1.0.0",
     "react": "0.14.6",
     "react-bootstrap": "^0.28.2",
-    "react-dom": "0.14.6"
+    "react-dom": "0.14.6",
+    "react-redux": "^4.0.6",
+    "redux": "^3.0.6"
   },
   "devDependencies": {
     "babel-core": "6.4.5",
@@ -50,6 +52,7 @@
     "jest-webpack-alias": "^2.2.0",
     "react-addons-test-utils": "^0.14.6",
     "react-hot-loader": "1.2.7",
+    "redux-devtools": "^3.0.1",
     "style-loader": "0.13.0",
     "url-loader": "0.5.6",
     "webpack": "1.12.11",
