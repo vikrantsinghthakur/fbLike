@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import className from 'classnames';
+import styles from './styles.css';
 
-// var doWork=function(e){
-// 	console.log("nigga");
-// 	window.alert("asdasdas");
-// }
 
 class Para extends React.Component{
 	doWork(){
@@ -21,17 +18,25 @@ class Para extends React.Component{
 			}
 			var flippedState= a==='true'?'false':'true';
 			this.props.onLikeChange({stat:flippedState});
-			//this.render();
 		}
 		
 
 	
 	render(){
-		debugger;
-		var a=window.localStorage.getItem("state");
+		
+		//var a=window.localStorage.getItem("state");
 		var text = this.props.status==='true'?'Liked':'Like';
+		var thisClass="btn btn-primary text-uppercase like_button";
+		if(this.props.status==='true')
+		{
+			thisClass="btn btn-primary text-uppercase like_button active"
+		}
+		debugger;
 		return(
-			<button onClick={this.doWork.bind(this)} className="btn btn-primary text-uppercase">{text}</button>);
+			<button onClick={this.doWork.bind(this)} className={thisClass}>
+			<span className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+			{text}
+			</button>);
 	}
 }
 

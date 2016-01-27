@@ -9,5 +9,12 @@ module.exports = {
       src = webpackAlias.process(src, filename);
     }
     return src;
+  },
+  process: function(src,filename) {
+  	if (path.match(/\.css$/)) {
+      return {};
+    }
+    return src;
   }
+
 };

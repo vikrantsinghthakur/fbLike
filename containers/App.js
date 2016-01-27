@@ -10,7 +10,6 @@ class App extends Component{
 
 	render(){
 		const { dispatch, stat }= this.props
-		debugger;
 		return(
 
 			<div>

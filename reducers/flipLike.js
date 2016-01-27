@@ -13,7 +13,7 @@ function flipLike(state,action)
 		return {'stat':FALSE}
 
 		default:
-		return {'stat':FALSE}
+		return {'stat':state.stat}
 	}
 }
 
