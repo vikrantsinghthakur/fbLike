@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import {setTrue, setFalse} from './../actions/toggleLike'
+import { toggleLike } from './../actions/toggleLike'
 import Para from './../components/para'
 import * as LikeActions from './../actions/toggleLike'
 
@@ -12,8 +12,10 @@ class App extends Component{
 		const { dispatch, stat }= this.props
 		return(
 
-			<div>
-				<Para status={stat} onLikeChange={newState => dispatch(setTrue(newState))}/>
+			<div className="row">
+			<div className="col-xs-6">
+				<Para status={stat} onLikeChange={newState => dispatch(toggleLike(newState))}/>
+			</div>
 			</div>
 		)
 	}

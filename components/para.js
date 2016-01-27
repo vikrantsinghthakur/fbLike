@@ -24,20 +24,24 @@ class Para extends React.Component{
 	
 	render(){
 		
-		//var a=window.localStorage.getItem("state");
-		var text = this.props.status==='true'?'Liked':'Like';
-		var thisClass="btn btn-primary text-uppercase like_button";
+		var text = this.props.status==='true'?' Liked':' Like';
+		var thisClass="btn btn-sm text-uppercase like_button size_fix";
 		if(this.props.status==='true')
 		{
-			thisClass="btn btn-primary text-uppercase like_button active"
+			thisClass="btn btn-sm text-uppercase like_button liked"
 		}
 		debugger;
 		return(
+			<div className="row">
+			<div className="col-xs-6">
+			THIS IS A STATUS<br/>
 			<button onClick={this.doWork.bind(this)} className={thisClass}>
 			<span className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
 			{text}
-			</button>);
-	}
+			</button>
+			</div>
+			</div>);
+		}
 }
 
 export default Para

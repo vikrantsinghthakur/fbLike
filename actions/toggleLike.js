@@ -1,14 +1,8 @@
 const TRUE='true';
 const FALSE='false';
 
-export function setTrue(value) {
+export function toggleLike(value) {
   return {
     type: value.stat
-  }
-}
-
-export function setFalse() {
-  return {
-    type: FALSE
   }
 }

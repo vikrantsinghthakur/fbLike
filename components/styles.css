@@ -1,14 +1,26 @@
-.btn-primary{
-
-	background-color: white;
-	color:black;
+.btn-sm{
+	border-radius: 0;
 }
-.btn-primary:focus{
-		background-color : white;
-		color:black;
-	};
-
-.btn-primary:hover{
-		background-color : white;
-		color:black;
-	};
+.liked{
+	background-color: rgb(51, 122, 183);
+	color:white;
+};
+.btn:focus .liked{
+	background-color: rgb(51, 122, 183);
+	color:white;
+};
+ .btn:hover .liked{
+	background-color: rgb(51, 122, 183);
+	color:white;
+};
+.liked:hover{
+	background-color: rgb(51, 122, 183);
+	color:white;
+};
+.liked:focus{
+	background-color: rgb(51, 122, 183);
+	color:white;
+};
+.size_fix{
+	padding-right: 20px;
+}

@@ -1,4 +1,4 @@
-import { SET_TRUE, SET_FALSE } from './../actions/toggleLike';
+import { TOGGLE_LIKE } from './../actions/toggleLike';
 const TRUE='true';
 const FALSE='false';
 

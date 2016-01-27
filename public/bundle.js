@@ -7563,6 +7563,10 @@
 	
 	var _styles2 = _interopRequireDefault(_styles);
 	
+	var _classnames = __webpack_require__(244);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
 	var _flipLike = __webpack_require__(267);
 	
 	var _flipLike2 = _interopRequireDefault(_flipLike);
@@ -27527,18 +27531,27 @@
 			key: 'render',
 			value: function render() {
 	
-				//var a=window.localStorage.getItem("state");
-				var text = this.props.status === 'true' ? 'Liked' : 'Like';
-				var thisClass = "btn btn-primary text-uppercase like_button";
+				var text = this.props.status === 'true' ? ' Liked' : ' Like';
+				var thisClass = "btn btn-sm text-uppercase like_button size_fix";
 				if (this.props.status === 'true') {
-					thisClass = "btn btn-primary text-uppercase like_button active";
+					thisClass = "btn btn-sm text-uppercase like_button liked";
 				}
 				debugger;
 				return _react2.default.createElement(
-					'button',
-					{ onClick: this.doWork.bind(this), className: thisClass },
-					_react2.default.createElement('span', { className: 'glyphicon glyphicon-thumbs-up', 'aria-hidden': 'true' }),
-					text
+					'div',
+					{ className: 'row' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'col-xs-6' },
+						'THIS IS A STATUS',
+						_react2.default.createElement('br', null),
+						_react2.default.createElement(
+							'button',
+							{ onClick: this.doWork.bind(this), className: thisClass },
+							_react2.default.createElement('span', { className: 'glyphicon glyphicon-thumbs-up', 'aria-hidden': 'true' }),
+							text
+						)
+					)
 				);
 			}
 		}]);
@@ -27639,7 +27652,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".btn-primary{\n\n\tbackground-color: white;\n\tcolor:black;\n}\n.btn-primary:focus{\n\t\tbackground-color : white;\n\t\tcolor:black;\n\t};\n\n.btn-primary:hover{\n\t\tbackground-color : white;\n\t\tcolor:black;\n\t};", ""]);
+	exports.push([module.id, ".btn-sm{\n\tborder-radius: 0;\n}\n.liked{\n\tbackground-color: rgb(51, 122, 183);\n\tcolor:white;\n};\n.btn:focus .liked{\n\tbackground-color: rgb(51, 122, 183);\n\tcolor:white;\n};\n .btn:hover .liked{\n\tbackground-color: rgb(51, 122, 183);\n\tcolor:white;\n};\n.liked:hover{\n\tbackground-color: rgb(51, 122, 183);\n\tcolor:white;\n};\n.liked:focus{\n\tbackground-color: rgb(51, 122, 183);\n\tcolor:white;\n};\n.size_fix{\n\tpadding-right: 20px;\n}", ""]);
 	
 	// exports
 
@@ -27702,10 +27715,14 @@
 	
 				return _react2.default.createElement(
 					'div',
-					null,
-					_react2.default.createElement(_para2.default, { status: stat, onLikeChange: function onLikeChange(newState) {
-							return dispatch((0, _toggleLike.setTrue)(newState));
-						} })
+					{ className: 'row' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'col-xs-6' },
+						_react2.default.createElement(_para2.default, { status: stat, onLikeChange: function onLikeChange(newState) {
+								return dispatch((0, _toggleLike.toggleLike)(newState));
+							} })
+					)
 				);
 			}
 		}]);
@@ -28891,20 +28908,13 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.setTrue = setTrue;
-	exports.setFalse = setFalse;
+	exports.toggleLike = toggleLike;
 	var TRUE = 'true';
 	var FALSE = 'false';
 	
-	function setTrue(value) {
+	function toggleLike(value) {
 	  return {
 	    type: value.stat
-	  };
-	}
-	
-	function setFalse() {
-	  return {
-	    type: FALSE
 	  };
 	}
 
