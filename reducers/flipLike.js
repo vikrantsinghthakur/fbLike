@@ -1,15 +1,16 @@
 import { SET_TRUE, SET_FALSE } from './../actions/toggleLike';
-const TRUE=true;
-const FALSE=false;
+const TRUE='true';
+const FALSE='false';
 
-function flipLike(state={'stat': 'false'},action)
+function flipLike(state,action)
 {
+	debugger;
 	switch(action.type){
 		case TRUE:
-		return {'stat':FALSE}
+		return {'stat':TRUE}
 
 		case FALSE:
-		return {'stat':TRUE}
+		return {'stat':FALSE}
 
 		default:
 		return {'stat':FALSE}

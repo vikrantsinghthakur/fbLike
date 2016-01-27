@@ -1,9 +1,10 @@
-const TRUE=true;
-const FALSE=false;
+const TRUE='true';
+const FALSE='false';
 
-export function setTrue() {
+export function setTrue(value) {
+	debugger;
   return {
-    type: TRUE
+    type: value.stat
   }
 }
 
