@@ -25,7 +25,7 @@ class Para extends React.Component{
 	render(){
 		
 		var text = this.props.status==='true'?' Liked':' Like';
-		var thisClass="btn btn-sm text-uppercase like_button size_fix";
+		var thisClass="btn btn-sm text-uppercase like_button";
 		if(this.props.status==='true')
 		{
 			thisClass="btn btn-sm text-uppercase like_button liked"
