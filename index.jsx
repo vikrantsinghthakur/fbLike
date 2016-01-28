@@ -13,7 +13,6 @@ const FALSE='false';
 var current=window.localStorage.getItem("state");
 if(current === null)
 	current=FALSE;
-debugger
 let store=createStore(flipLike,{'stat':current});
 let rootElement= document.querySelector("#myApp");
 
