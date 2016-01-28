@@ -7,7 +7,6 @@ import styles from './styles.css';
 class Para extends React.Component{
 	doWork(){
 			var a=window.localStorage.getItem("state");
-			//console.log(a);
 			if(a==='true')
 			{
 				window.localStorage.setItem("state","false");

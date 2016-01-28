@@ -1,16 +1,14 @@
-// __tests__/sum-test.js
-import ReactDOM from 'react-dom';
-import Para1 from '../components/para.js';
+var ReactDOM =require('react-dom');
 jest.dontMock('../components/para.js');
 
 describe('Para', function() {
 	var React=require('react/addons');
 	var TestUtils=React.addons.TestUtils;
-	
+	var Para1;
 
-	// beforeEach(function(){
-		
-	// });
+	beforeEach(function(){
+		Para1 =require('../components/para');	
+	});
 
  	it('should render component', function() {
  	var para= TestUtils.renderIntoDocument(<Para1/>);
@@ -20,14 +18,14 @@ describe('Para', function() {
  	it('should get initial state from localstorage', function(){
  		var para= TestUtils.renderIntoDocument(<Para1/>);
  		var label= ReactDOM.findDOMNode(para);
- 		var stat=window.localStorage.getItem('likedState');
- 		if(stat==null || stat==false)
+ 		var stat=window.localStorage.getItem('status');
+ 		if(stat==null || stat==="false")
  		{
- 			expect(label.textContent).toEqual('Like');
+ 			expect(label.textContent).toEqual('THIS IS A STATUS Like');
  		}
  		else
  		{
- 			expect(label.textContent).toEqual('Liked');	
+ 			expect(label.textContent).toEqual('THIS IS A STATUS Liked');	
  		}
  	});
 
