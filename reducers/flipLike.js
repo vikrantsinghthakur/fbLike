@@ -4,7 +4,6 @@ const FALSE='false';
 
 function flipLike(state,action)
 {
-	debugger;
 	switch(action.type){
 		case TRUE:
 		return {'stat':TRUE}

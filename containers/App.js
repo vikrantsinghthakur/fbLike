@@ -11,12 +11,7 @@ class App extends Component{
 	render(){
 		const { dispatch, stat }= this.props
 		return(
-
-			<div className="row">
-			<div className="col-xs-6">
 				<Para status={stat} onLikeChange={newState => dispatch(toggleLike(newState))}/>
-			</div>
-			</div>
 		)
 	}
 }

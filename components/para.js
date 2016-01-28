@@ -29,12 +29,13 @@ class Para extends React.Component{
 		if(this.props.status==='true')
 		{
 			thisClass="btn btn-sm text-uppercase like_button liked"
-		}
-		debugger;
+		};
 		return(
 			<div className="row">
-			<div className="col-xs-6">
+			<div className="col-xs-offset-5">
+			<p>
 			THIS IS A STATUS<br/>
+			</p>
 			<button onClick={this.doWork.bind(this)} className={thisClass}>
 			<span className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
 			{text}
