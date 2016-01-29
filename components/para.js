@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import className from 'classnames';
-import styles from './styles.css';
 
 
 class Para extends React.Component{
 	doWork(){
-			var a=window.localStorage.getItem("state");
-			var flippedState= a==='true'?'false':'true';
+			var lStorageState=window.localStorage.getItem("state");
+			var flippedState= lStorageState==='true'?'false':'true';
 
-			if(a==='true')
+			if(lStorageState==='true')
 			{
 				window.localStorage.setItem("state","false");
 			}
@@ -26,7 +25,7 @@ class Para extends React.Component{
 	render(){
 		
 		var text = this.props.status==='true'?' Liked':' Like';
-		var thisClass="btn btn-sm text-uppercase like_button";
+		var thisClass="btn btn-sm like_button";
 		var iconClass="glyphicon"
 
 		if(this.props.status==='true')
@@ -40,7 +39,7 @@ class Para extends React.Component{
 		}
 		return(
 			<div className="row">
-				<div className="col-xs-offset-5">
+				<div className="col-xs-offset-4">
 					<p>
 						THIS IS A STATUS<br/>
 					</p>

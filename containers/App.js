@@ -9,7 +9,7 @@ import * as LikeActions from './../actions/toggleLike'
 class App extends Component{
 
 	render(){
-		const { dispatch, stat }= this.props
+		const { dispatch, stat }= this.props;
 		return(
 				<Para status={stat} onLikeChange={newState => dispatch(toggleLike(newState))}/>
 		)

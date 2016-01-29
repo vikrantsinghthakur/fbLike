@@ -13,7 +13,8 @@ describe('Para', function() {
 		Para1 =require('../components/para')
 	});
 
-	it('this is an empty test and might fail',function(){
+	it('THIS IS AN EMPTY TEST AND MIGHT FAIL',function(){
+		//Workaround to allow import of components
 	});
 
  	it('should render component', function() {

@@ -1,8 +1,14 @@
 .btn-sm{
-	border-radius: 0;
-	width: 70px;
-}
-.liked{
-	background-color: rgb(51, 122, 183);
 	color:white;
-};
+	width: 70px;
+	background-color: rgb(51, 122, 183);
+}
+.btn-sm:hover{
+	color:white;	
+}
+.btn-sm:focus{
+	color:white;
+}
+p {
+	font-size: xx-large;
+}
