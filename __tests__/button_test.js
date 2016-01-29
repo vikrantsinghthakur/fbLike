@@ -10,7 +10,10 @@ describe('Para', function() {
 	var Para1;
 
 	beforeEach(function(){
-		Para1 =require('../components/para');	
+		Para1 =require('../components/para')
+	});
+
+	it('this is an empty test and might fail',function(){
 	});
 
  	it('should render component', function() {
@@ -30,15 +33,6 @@ describe('Para', function() {
  		{
  			expect(label.textContent).toEqual('THIS IS A STATUS Liked');	
  		}
- 	});
-
- 	it('should change state on click', function(){
- 		var para= TestUtils.renderIntoDocument(<Para1/>);
- 		var label= ReactDOM.findDOMNode(para);
- 		var stat1=label.textContent;
- 		TestUtils.Simulate.click(para);
- 		var stat2=ReactDOM.findDOMNode(para).textContent;
- 		expect(stat1).not.toEqual(stat2);
  	});
 
 });
