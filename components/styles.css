@@ -6,30 +6,3 @@
 	background-color: rgb(51, 122, 183);
 	color:white;
 };
-.btn:focus .liked{
-	background-color: rgb(51, 122, 183);
-	color:white;
-	border-radius:0;
-	border-color: transparent;
-};
- .btn:hover .liked{
-	background-color: rgb(51, 122, 183);
-	color:white;
-	border-radius:0;
-	border-color: transparent;
-};
-.liked:hover{
-	background-color: rgb(51, 122, 183);
-	color:white;
-	border-radius:0;
-	border-color: transparent;
-};
-.liked:focus{
-	background-color: rgb(51, 122, 183);
-	color:white;
-	border-radius:0;
-	border-color: transparent;
-};
-p {
-	font-size: 50px;
-};
