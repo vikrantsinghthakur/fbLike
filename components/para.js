@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import className from 'classnames';
 
-
 class Para extends React.Component{
 	doWork(){
 			var lStorageState=window.localStorage.getItem("state");

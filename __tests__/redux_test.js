@@ -1,4 +1,5 @@
 jest.dontMock('../actions/toggleLike');
+jest.dontMock('../reducers/flipLike');
 
 
 describe('reduxTests', function() {
@@ -11,10 +12,10 @@ describe('reduxTests', function() {
  		expect(likeProp.toggleLike(val)).toEqual(expectedVal);
  	});
 
- 	// it('should reduce the action',function(){
- 	// 	var redcr=require('./../reducers/flipLike');
- 	// 	const TRUE='true';
- 	// 	expect(redcr.flipLike(null,TRUE)).toEqual(TRUE);
- 	// });
+ 	it('should reduce the action',function(){
+ 		var redcr=require('./../reducers/flipLike');
+ 		const TRUE='true';
+ 		expect(redcr.default({},{type:TRUE}).stat).toEqual(TRUE);
+ 	});
 
 });
