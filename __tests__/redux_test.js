@@ -15,7 +15,9 @@ describe('reduxTests', function() {
  	it('should reduce the action',function(){
  		var redcr=require('./../reducers/flipLike');
  		const TRUE='true';
+ 		const FALSE='false';
  		expect(redcr.default({},{type:TRUE}).stat).toEqual(TRUE);
+ 		expect(redcr.default({},{type:FALSE}).stat).toEqual(FALSE);
  	});
 
 });
