@@ -32,3 +32,8 @@ If you want to run with webpack-dev-server simply run this command:
 ```
 
 Open the web browser to `http://localhost:8080/`
+
+To run tests,type
+```
+> $ npm test
+```
