@@ -24,12 +24,11 @@ class Para extends React.Component{
 	render(){
 		
 		var text = this.props.status==='true'?' Liked':' Like';
-		var thisClass="btn btn-sm like_button";
+		var thisClass="btn btn-sm";
 		var iconClass="glyphicon"
 
 		if(this.props.status==='true')
 		{
-			thisClass=thisClass.concat(" liked");
 			iconClass=iconClass.concat(" glyphicon-ok");
 		}
 		else
