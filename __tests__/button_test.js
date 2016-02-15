@@ -13,10 +13,6 @@ describe('Para', function() {
 		Para1 =require('../components/para')
 	});
 
-	it('THIS IS AN EMPTY TEST AND MIGHT FAIL',function(){
-		//Workaround to allow import of components
-	});
-
  	it('should render component', function() {
  	var para= TestUtils.renderIntoDocument(<Para1/>);
  	expect(TestUtils.isCompositeComponent(para)).toBeTruthy();
