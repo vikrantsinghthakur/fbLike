@@ -1,4 +1,3 @@
-import { TOGGLE_LIKE } from './../actions/toggleLike';
 const TRUE='true';
 const FALSE='false';
 

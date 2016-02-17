@@ -6,10 +6,8 @@ import App from './containers/App';
 import {createStore} from 'redux';
 import { Provider } from 'react-redux';
 import styles from './components/styles.css'
-import className from 'classnames'
 import flipLike from './reducers/flipLike';
 
-const TRUE='true';
 const FALSE='false';
 
 var current=window.localStorage.getItem("state");
