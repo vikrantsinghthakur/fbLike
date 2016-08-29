@@ -36,8 +36,7 @@ class Para extends React.Component{
 			iconClass=iconClass.concat(" glyphicon-thumbs-up");
 		}
 		return(
-			<div className="row">
-				<div className="col-xs-offset-4">
+			<div className="status">
 					<p>
 						THIS IS A STATUS<br/>
 					</p>
@@ -45,7 +44,6 @@ class Para extends React.Component{
 						<span className={iconClass}></span>
 							{text}
 					</button>
-				</div>
 			</div>);
 		}
 }

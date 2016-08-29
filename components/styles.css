@@ -9,6 +9,9 @@
 .btn-sm:focus{
 	color:white;
 }
+.status{
+	text-align:center;
+}
 p {
 	font-size: xx-large;
 }

@@ -1,4 +1,3 @@
-import bootstyles from './node_modules/bootstrap/dist/css/bootstrap.min.css'
 import React from 'react';
 import { render } from 'react-dom';
 import Para from './components/para';
