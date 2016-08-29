@@ -1,6 +1,6 @@
 # Stateful Like button
 
-Basic button which maintains its state on interaction and page reloads. Built with react for rendering and redux for maintaining store. Tests included.
+Basic button which maintains its state on interaction and page reloads. Built with react for rendering and redux for maintaining state. Tests included.
 
 Instructions to run:
   - Clone the repo
