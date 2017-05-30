@@ -4,7 +4,8 @@
   "description": "Facebok like button",
   "main": "''",
   "scripts": {
-    "preinstall": "npm install",
+    "postinstall": "if [ $BUILD_ASSETS ]; then npm run build-assets; fi",
+    "build-assets": "npm install",
     "test": "jest",
     "build": "webpack --progress --profile --colors",
     "dev": "webpack-dev-server --progress --profile --colors --hot",
