@@ -1,18 +1,21 @@
 {
   "name": "fb-like",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Facebok like button",
   "main": "''",
   "scripts": {
     "test": "jest",
     "postinstall": "npm run build",
     "build": "webpack --progress --profile --colors",
-    "dev": "webpack-dev-server --progress --profile --colors --hot",
-    "start": "webpack-dev-server --progress --profile --colors --hot"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/alicoding/react-webpack-babel"
+  },
+  "engines": {
+    "node": "6.10.3",
+    "npm":"3.10.10"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
