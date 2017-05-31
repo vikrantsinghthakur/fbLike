@@ -2,25 +2,23 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    entry: [
-    'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
-    'webpack/hot/only-dev-server',
-    './index.jsx' // Appʼs entry point
-  ],
+    entry: {
+        index: './index.jsx' // Appʼs entry point
+    },
     devtool: process.env.WEBPACK_DEVTOOL || 'source-map',
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['*', '.js', '.jsx']
     },
     module: {
         loaders: [
             {
                 test: /\.jsx?$/,
                 exclude: /(node_modules|bower_components)/,
-                loaders: ['react-hot', 'babel']
+                loaders: ['react-hot-loader','babel-loader']
             },
 
             {

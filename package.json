@@ -4,10 +4,8 @@
   "description": "Facebok like button",
   "main": "''",
   "scripts": {
-    "postinstall": "if [ $BUILD_ASSETS ]; then npm run build-assets; fi",
-    "build-assets": "npm install",
     "test": "jest",
-    "build": "webpack --progress --profile --colors",
+    "build": "webpack --progress --profile --colors --display-error-details",
     "dev": "webpack-dev-server --progress --profile --colors --hot",
     "start": "webpack-dev-server --progress --profile --colors --hot"
   },
@@ -38,11 +36,13 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "node-libs-browser": "1.0.0",
-    "react": "0.14.6",
-    "react-redux": "^4.0.6",
-    "redux": "^3.0.6"
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
     "babel-core": "6.4.5",
     "babel-jest": "^6.0.1",
     "babel-loader": "6.2.1",
@@ -51,12 +51,12 @@
     "css-loader": "0.23.1",
     "jest-cli": "^0.8.2",
     "jest-webpack-alias": "^2.2.0",
-    "react-addons-test-utils": "^0.14.6",
-    "react-hot-loader": "1.2.7",
+    "react-addons-test-utils": "^15.5.1",
+    "react-hot-loader": "^1.3.1",
     "redux-devtools": "^3.0.1",
     "style-loader": "0.13.0",
     "url-loader": "0.5.6",
-    "webpack": "1.12.11",
-    "webpack-dev-server": "1.14.1"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }

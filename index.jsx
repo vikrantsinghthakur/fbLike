@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import Para from './components/para';
 import App from './containers/App';
 import {createStore} from 'redux';
@@ -17,7 +17,7 @@ if(current === null)
 let store=createStore(flipLike,{'stat':current});
 let rootElement= document.querySelector("#myApp");
 
-render(
+ReactDOM.render(
 	<Provider store={store}>
 		<App/>
 	</Provider>,
